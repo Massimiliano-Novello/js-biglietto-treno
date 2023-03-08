@@ -15,11 +15,12 @@ const kilometres = parseInt(prompt("Quanti chilometri vuoi fare?"));
 const userAge = parseInt(prompt("Quanti anni hai?"));
 console.log(kilometres,userAge);
 
-if (isNaN(userAge)) {
-    console.log("non è un numero. non posso continuare");
-}
-//LOGICA
-//Calcolare il prezzo del biglietto
+if (!isNaN(userAge)) {
+    console.log("E' un numero. Posso continuare");
+
+
+    //LOGICA
+    //Calcolare il prezzo del biglietto
 let price = 0.21 * kilometres;
 price = parseFloat(price).toFixed(2);
 console.log(price);
@@ -51,3 +52,7 @@ if (userAge < 18) {
 //OUTPUT
 console.log(message);
 document.getElementById("discount").innerHTML = message;
+
+} else {
+    console.log("Non è un numero. Ricarica la pagina");
+  }
